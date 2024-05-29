@@ -1,5 +1,25 @@
 # Audio File Parser
 
+## Installation:
+
+Clone the repository:
+
+```sh
+git clone <repo>
+cd <repo>
+```
+
+Install Ruby and dependencies:
+
+```sh
+asdf install # or rbenv install
+bundle install
+```
+
+## Notes:
+
+- I assumed that `docker` and `docker compose` are not required for this exercise, and that `asdf` or `rbenv` are good enough
+
 ## Instructions:
 
 - Write a ruby script that accepts a directory as an input. Eg. `ruby audio_parser.rb <input_dir>`
@@ -7,7 +27,7 @@
   - Any non Wav files will be ignored by the script.
   - The script should be able to generate applicable output(s) even if some files are ignored.
 
-- Extract the following metadata information from the Wav files. 
+- Extract the following metadata information from the Wav files.
   - **IMPORTANT!** You must not use any existing third party **executable** to extract the data like mediainfo or ffprobe.
   - You are allowed to use any ruby library to help you read and interpret the bytes from the input files.
 
