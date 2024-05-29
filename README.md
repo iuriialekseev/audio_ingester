@@ -16,6 +16,12 @@ asdf install # or rbenv install
 bundle install
 ```
 
+Run the tests:
+
+```sh
+bundle exec rspec
+```
+
 ## Notes:
 
 - I assumed that `docker` and `docker compose` are not required for this exercise, and that `asdf` or `rbenv` are good enough
