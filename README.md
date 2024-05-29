@@ -22,10 +22,25 @@ Run the tests:
 bundle exec rspec
 ```
 
+Run the script:
+
+```sh
+bundle exec ruby main.rb <input_dir>
+```
+
+Check the output in the `output` folder:
+
+```sh
+tree output
+cat output/<timestamp>/<file>.xml
+```
+
 ## Notes:
 
+- I assumed that valid wav files with invalid extensions should be considered valid
 - If there are multiple readers or writers, they can be extracted into `lib/readers` and `lib/writers` accordingly
 - I assumed that `docker` and `docker compose` are not required for this exercise, and that `asdf` or `rbenv` are good enough
+- Logging can and should be improved from using `puts` to a more structured approach
 
 ## Instructions:
 
