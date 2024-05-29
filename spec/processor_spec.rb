@@ -3,7 +3,7 @@
 require_relative '../lib/processor'
 
 RSpec.describe Processor do
-  context '#process' do
+  describe '#process' do
     let(:output) { 'spec/output' }
 
     after { FileUtils.rm_rf(output) }

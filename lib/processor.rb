@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'wav_reader'
 require_relative 'xml_writer'
 

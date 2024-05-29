@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gem 'bindata'
 gem 'rexml'
 
-group :development, :test do
+group :development do
   gem 'pry'
 end
 

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../lib/wav_reader'
 
 RSpec.describe WavReader do
-  context '#metadata' do
-    context 'valid' do
+  describe '#metadata' do
+    context 'when file is valid' do
       let(:valid) { 'spec/fixtures/valid.wav' }
       let(:valid_no_extension) { 'spec/fixtures/valid' }
 
@@ -27,7 +29,7 @@ RSpec.describe WavReader do
       end
     end
 
-    context 'invalid' do
+    context 'when file is invalid' do
       let(:corrupted) { 'spec/fixtures/corrupted.wav' }
       let(:invalid_png) { 'spec/fixtures/invalid.png' }
       let(:invalid_txt) { 'spec/fixtures/invalid.txt' }
@@ -35,22 +37,22 @@ RSpec.describe WavReader do
 
       it 'returns nil for a corrupted wav file' do
         metadata = described_class.metadata(corrupted)
-        expect(metadata).to eq(nil)
+        expect(metadata).to be_nil
       end
 
       it 'returns nil for an invalid png file' do
         metadata = described_class.metadata(invalid_png)
-        expect(metadata).to eq(nil)
+        expect(metadata).to be_nil
       end
 
       it 'returns nil for an invalid txt file' do
         metadata = described_class.metadata(invalid_txt)
-        expect(metadata).to eq(nil)
+        expect(metadata).to be_nil
       end
 
       it 'returns nil for an empty wav file' do
-        metadata = described_class.metadata(invalid_txt)
-        expect(metadata).to eq(nil)
+        metadata = described_class.metadata(empty)
+        expect(metadata).to be_nil
       end
     end
   end

@@ -3,7 +3,7 @@
 require_relative '../lib/xml_writer'
 
 RSpec.describe XmlWriter do
-  context '#write' do
+  describe '#write' do
     let(:output_path) { 'spec/fixtures/output.xml' }
 
     after { File.delete(output_path) }
