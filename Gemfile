@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 gem 'bindata'
+gem 'rexml'
 
 group :development, :test do
   gem 'pry'

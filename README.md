@@ -24,6 +24,7 @@ bundle exec rspec
 
 ## Notes:
 
+- If there are multiple readers or writers, they can be extracted into `lib/readers` and `lib/writers` accordingly
 - I assumed that `docker` and `docker compose` are not required for this exercise, and that `asdf` or `rbenv` are good enough
 
 ## Instructions:
